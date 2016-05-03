@@ -1,0 +1,26 @@
+_model: flow-page
+---
+title: This is a flow page!
+---
+body:
+
+#### text ####
+content: Hello! I’m some text.
+#### text ####
+content: And so am I.
+#### text ####
+content: And so am I.
+#### stat ####
+prefix: +
+----
+value: 20
+----
+units: %
+----
+primaryLabel: Conversions
+----
+secondaryLabel: In the last year
+#### quote ####
+content: I SAID A THING!
+----
+source: Bob

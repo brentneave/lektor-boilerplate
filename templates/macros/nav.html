@@ -1,0 +1,13 @@
+{% macro render_nav(self) %}
+
+	{% set root = site.get('/') %}
+	<ul class="nav">
+		{% for child in root.children recursive %}
+	  	<li class="nav__item{% if self.path == child.path %} nav__item--current{% endif %}">
+			<a href="{{child|url}}">{{ child.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+
+{% endmacro %}

@@ -1,0 +1,6 @@
+{% macro render_quote(quote) %}
+	<blockquote class="c c-quote">
+	  {{ quote.content }}
+	  <cite class="c-quote__source">&mdash;{{ quote.source }}</cite>
+	</blockquote>
+{% endmacro %}

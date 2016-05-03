@@ -1,0 +1,19 @@
+{% macro render_stat(stat) %}
+  <div class='c c-stat'>
+    {% if stat.prefix %}
+      <span class='c-stat__prefix'>{{ stat.prefix }}</span>
+    {% endif %}
+    {% if stat.value %}
+      <span class='c-stat__value'>{{ stat.value }}</span>
+    {% endif %}
+    {% if stat.units %}
+      <span class='c-stat__units'>{{ stat.units }}</span>
+    {% endif %}
+    {% if stat.primaryLabel %}
+      <span class='c-stat__primary-label'>{{ stat.primaryLabel }}</span>
+    {% endif %}
+    {% if stat.secondaryLabel %}
+      <span class='c-stat__secondary-label'>{{ stat.secondaryLabel }}</span>
+    {% endif %}
+  </div>
+{% endmacro %}
