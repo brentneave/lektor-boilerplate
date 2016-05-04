@@ -1,0 +1,23 @@
+.c-stat {
+	&__prefix,
+	&__value,
+	&__units {
+		@include t-body;
+		float: left;
+		font-size: 3rem;
+	}
+
+	&__primary-label {
+		@include t-tiny--uppercase;
+		clear: left;
+		display: block;
+	}
+
+	&__secondary-label {
+		@include t-tiny--uppercase;
+		@include t-muted;
+		clear: left;
+		display: block;
+	}
+	
+}
