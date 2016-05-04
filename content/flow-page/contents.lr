@@ -7,11 +7,11 @@ body:
 #### text ####
 content: Hello! I’m some text.
 #### text ####
-content: And so am I.
+content: #And so am I.
 #### text ####
 content: And so am I.
 #### stat ####
-prefix: +
+prefix: 
 ----
 value: 20
 ----

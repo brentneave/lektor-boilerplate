@@ -1,0 +1,139 @@
+/* headlines */
+
+@mixin t-headline {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: medium;
+	line-height: 1.25;
+}
+
+@mixin t-headline--block {	
+	&:not(:first-child) {
+		margin-top: 2.5em;
+	}
+	&:not(:last-child) {
+		margin-bottom: 1.25em;
+	}
+}
+
+/*body text */
+
+@mixin t-body {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: medium;
+	line-height: 1.5;
+}
+
+@mixin t-body--block {
+	&:not(:last-child) {
+		margin-bottom: 1.5em;
+	}
+}
+
+@mixin t-body--list-item {
+	&:not(:last-child) {
+		margin-bottom: .75em;
+	}
+}
+
+/* wee diddy text */
+
+@mixin t-tiny {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: .75em;
+	line-height: 1.66666667;
+}
+
+@mixin t-tiny--block {
+	&:not(:last-child) {
+		margin-bottom: .83333333em;
+	}
+}
+
+@mixin t-tiny--uppercase {
+	@include t-tiny;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+/* muted text */
+@mixin t-muted {
+	opacity: .5;
+}
+
+/* default styling for elements */
+
+body {
+	@include t-body;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+	@include t-headline;
+	@include t-headline--block;
+	font-weight: bold;
+}
+
+h1, .h1 {
+	font-size: 3em;
+}
+
+h2, .h2 {
+	font-size: 2em;
+}
+
+h3, .h3 {
+	font-size: 1.25em;
+}
+
+h4, .h4,
+h5, .h5 {
+	@include t-body;
+	@include t-body--block;
+}
+
+h4, .h4 {
+	font-weight: bold;
+}
+
+h5, .h5 {
+	font-weight: normal;
+	font-style: italic;
+}
+
+h6, .h6 {
+	@include t-tiny;
+	@include t-tiny--uppercase;
+	@include t-tiny--block;
+}
+
+p,
+ul,
+ol,
+dl,
+address,
+li,
+td,
+th,
+button,
+select,
+input,
+blockquote,
+cite {
+	@include t-body;
+}
+
+p,
+ul,
+ol,
+dl,
+address,
+blockquote {
+	@include t-body--block;
+}
+
+li {
+	@include t-body--list-item;
+}
