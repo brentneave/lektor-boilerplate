@@ -1,0 +1,91 @@
+.c-nav-small {
+
+  @include breakpoint-3 {
+    display:none;
+  }
+
+  &__checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__button-open,
+  &__button-close, {
+    @include t-tiny--uppercase;
+
+    display: block;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transform-origin: center center;
+    transition: transform .25s ease-in-out,
+                opacity .25s ease-in-out,
+                font-size .25s ease-in;
+
+    line-height: 3.5rem;
+    text-align: center;
+  }
+
+  &__button-close {
+    background-color: black;
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+
+  &__items {
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 2.25rem 1.5rem 1.5rem;
+    @include breakpoint-4 {
+      padding: 4rem;
+    }
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity .333s ease-in-out;
+    background-color: $light-grey;
+    text-align: left;
+  }
+
+  &__item {
+    @include t-body;
+
+    display:block;
+    float: left;
+    clear: left;
+    color: black;
+    opacity: 0;
+    transform: translateY(3.5rem);
+    transition: transform .44s ease-out,
+                opacity .33s ease-out;
+  }
+
+  &__checkbox:checked ~ &__button-open {
+    transform: rotate(180deg);
+    font-size: 0;
+  }
+
+  &__checkbox:checked ~ &__button-close {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__items {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__items > &__item { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+{% macro render_nav_small(self) %}
+
+	{% set root = site.get('/') %}
+
+	<div class='c c-nav-small'>
+	    <input type='checkbox' id='c-nav-small__checkbox' class='c-nav-small__checkbox'>
+	    <div class='c-nav-small__items'>
+			{% for child in root.children recursive %}
+				<a class='c-nav-small__item{% if self.path == child.path %} c-nav-small__item--selected{% endif %}' href="{{child|url}}">{{ child.title }}</a>
+			{% endfor %}
+	    </div>
+	    <label class='c-nav-small__button-open' for='c-nav-small__checkbox'>Menu</label>
+	    <label class='c-nav-small__button-close' for='c-nav-small__checkbox'>✕</label>
+	</div>
+
+{% endmacro %}

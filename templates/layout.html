@@ -1,5 +1,6 @@
 
 {% from "macros/nav.html" import render_nav %}
+{% from "macros/components/nav-small.html" import render_nav_small %}
 
 <!doctype html>
 <meta charset="utf-8">
@@ -17,8 +18,9 @@
   </div>
   <footer>
 
-
-
-    &copy; Copyright 2016 by Brent.
   </footer>
+
+
+  {{ render_nav_small(this) }}
+
 </body>
