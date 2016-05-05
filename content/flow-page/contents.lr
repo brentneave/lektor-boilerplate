@@ -5,7 +5,10 @@ title: This is a flow page!
 body:
 
 #### text ####
-content: Hello! I’m some text.
+content:
+
+We are New Zealand's research and education network. We believe in a New Zealand where research, education and innovation flourish through real-time exchange of knowledge, ideas and information with the rest of the world. See how we're working towards that.
+GNS Science monitor all sorts of events, from earthquakes and volcanoes to landslides and tsunamis. Learn how they build a picture of New Zealand, and monitor how it changes over time.
 #### text ####
 content: #And so am I.
 #### text ####
@@ -24,3 +27,84 @@ secondaryLabel: In the last year
 content: I SAID A THING!
 ----
 source: Bob
+#### quote ####
+content: 
+----
+source: 
+#### stat-group ####
+stats:
+
+##### stat #####
+prefix: +
+-----
+value: 123
+-----
+units: %
+-----
+primaryLabel:
+
+increase 
+-----
+secondaryLabel: in stuff
+##### stat #####
+prefix: 
+-----
+value: 256
+-----
+units: GB
+-----
+primaryLabel: Storage
+-----
+secondaryLabel: SSD
+#### grid ####
+items:
+
+##### grid-item #####
+content:
+
+###### text ######
+content: Grid thing 1
+-----
+default_width: 2
+-----
+small_width: 
+-----
+medium_width: 3
+-----
+large_width: 4
+##### grid-item #####
+content:
+
+###### text ######
+content: Grid thing 2
+-----
+default_width: 1
+-----
+small_width: 2
+-----
+medium_width: 3
+-----
+large_width: 4
+##### grid-item #####
+content:
+
+###### text ######
+content: Grid thing 3
+###### stat ######
+prefix: 
+------
+value: 128
+------
+units: 
+------
+primaryLabel: My favourite number
+------
+secondaryLabel: 
+-----
+default_width: 1
+-----
+small_width: 2
+-----
+medium_width: 3
+-----
+large_width: 4

@@ -4,17 +4,66 @@
 	&__item {
 		display: inline-block;
 		font-size: medium;
+		vertical-align: top;
 
-		&--half {
-			width: 50%;
+		&--2  { width: percentage(1/2 ); }
+		&--3  { width: percentage(1/3 ); }
+		&--4  { width: percentage(1/4 ); }
+		&--5  { width: percentage(1/5 ); }
+		&--6  { width: percentage(1/6 ); }
+		&--7  { width: percentage(1/7 ); }
+		&--8  { width: percentage(1/8 ); }
+		&--9  { width: percentage(1/9 ); }
+		&--10 { width: percentage(1/10); }
+		&--11 { width: percentage(1/11); }
+		&--12 { width: percentage(1/12); }
+
+		@include breakpoint-3 {
+			&--2s  { width: percentage(1/2 ); }
+			&--3s  { width: percentage(1/3 ); }
+			&--4s  { width: percentage(1/4 ); }
+			&--5s  { width: percentage(1/5 ); }
+			&--6s  { width: percentage(1/6 ); }
+			&--7s  { width: percentage(1/7 ); }
+			&--8s  { width: percentage(1/8 ); }
+			&--9s  { width: percentage(1/9 ); }
+			&--10s { width: percentage(1/10); }
+			&--11s { width: percentage(1/11); }
+			&--12s { width: percentage(1/12); }
 		}
 
-		&--quarter {
-			width: 25%;
+		@include breakpoint-5 {
+			&--2m  { width: percentage(1/2 ); }
+			&--3m  { width: percentage(1/3 ); }
+			&--4m  { width: percentage(1/4 ); }
+			&--5m  { width: percentage(1/5 ); }
+			&--6m  { width: percentage(1/6 ); }
+			&--7m  { width: percentage(1/7 ); }
+			&--8m  { width: percentage(1/8 ); }
+			&--9m  { width: percentage(1/9 ); }
+			&--10m { width: percentage(1/10); }
+			&--11m { width: percentage(1/11); }
+			&--12m { width: percentage(1/12); }
 		}
 
-		&--third {
-			width: 33.33333333%;
+		@include breakpoint-7 {
+			&--2l  { width: percentage(1/2 ); }
+			&--3l  { width: percentage(1/3 ); }
+			&--4l  { width: percentage(1/4 ); }
+			&--5l  { width: percentage(1/5 ); }
+			&--6l  { width: percentage(1/6 ); }
+			&--7l  { width: percentage(1/7 ); }
+			&--8l  { width: percentage(1/8 ); }
+			&--9l  { width: percentage(1/9 ); }
+			&--10l { width: percentage(1/10); }
+			&--11l { width: percentage(1/11); }
+			&--12l { width: percentage(1/12); }
 		}
+	}
+}
+
+.l-grid--auto {
+	&__item {
+
 	}
 }
