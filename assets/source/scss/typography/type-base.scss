@@ -1,10 +1,14 @@
+$t-sans-serif: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, sans-serif;
+
+
 /* headlines */
 
 @mixin t-headline {
 	margin: 0;
-	font-family: sans-serif;
+	font-family: $t-sans-serif;
 	font-size: medium;
 	line-height: 1.25;
+	text-rendering: optimizeLegibility;
 }
 
 @mixin t-headline--block {	
@@ -20,9 +24,9 @@
 
 @mixin t-body {
 	margin: 0;
-	font-family: sans-serif;
-	font-size: medium;
-	line-height: 1.5;
+	font-family: $t-sans-serif;
+	font-size: 1.25rem;
+	line-height: (28/20);
 }
 
 @mixin t-body--block {
@@ -41,9 +45,9 @@
 
 @mixin t-tiny {
 	margin: 0;
-	font-family: sans-serif;
-	font-size: .75em;
-	line-height: 1.66666667;
+	font-family: $t-sans-serif;
+	font-size: .75rem;
+	line-height: 1.66666667em;
 }
 
 @mixin t-tiny--block {
@@ -55,7 +59,14 @@
 @mixin t-tiny--uppercase {
 	@include t-tiny;
 	text-transform: uppercase;
-	letter-spacing: .1em;
+	letter-spacing: .15em;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin t-tiny--uppercase--block {
+	&:not(:last-child) {
+		margin-bottom: 16/11/2;
+	}
 }
 
 /* muted text */
@@ -66,7 +77,7 @@
 /* default styling for elements */
 
 body {
-	@include t-body;
+	//@include t-body;
 }
 h1, .h1,
 h2, .h2,
