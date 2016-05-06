@@ -1,26 +1,38 @@
-
-{% from "macros/nav.html" import render_nav %}
+{% from "macros/components/nav-main.html" import render_nav %}
 {% from "macros/components/nav-small.html" import render_nav_small %}
+{% from "macros/components/nav-footer.html" import render_nav_footer %}
+{% from "macros/components/page-header.html" import render_page_header %}
 
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/css/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — Lektor Experiment</title>
+<title>{% block title %}Welcome{% endblock %} — Lektor Boilerplate</title>
 <body>
-  <header>
-    <h1>Lektor Boilerplate</h1>
 
-    {{ render_nav(this) }}
+    {% block nav %}
+      <div class="l-slice l-slice--nav-main">
+        {{ render_nav(this) }}
+      </div>
+    {% endblock %}
 
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer>
+    {% block header %}
+      <div class="l-slice l-slice--page-header">
+        {{ render_page_header(this) }}
+      </div>
+    {% endblock %}
 
-  </footer>
+    {% block body %}
+      {{ this.body }}
+    {% endblock %}
 
+    {% block footer %}
+      <div class="l-slice l-slice--page-footer">
+        {{ render_nav_footer(this) }}
+      </div>
+    {% endblock %}
 
-  {{ render_nav_small(this) }}
+    {% block nav_small %}
+        {{ render_nav_small(this) }}
+    {% endblock %}
 
 </body>

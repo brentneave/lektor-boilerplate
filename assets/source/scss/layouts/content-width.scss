@@ -1,0 +1,19 @@
+.l-content-width {
+	
+	@include breakpoint-4 {
+		margin: 0 6.25%;
+	}
+	
+	@include breakpoint-5 {
+		margin: 0 12.5%;
+	}
+	
+	@include breakpoint-7 {
+		margin: 0 percentage(1/6);
+	}
+	
+	@include breakpoint-9 {
+		margin: 0 25%;
+	}
+
+}

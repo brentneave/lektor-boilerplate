@@ -1,0 +1,62 @@
+_model: flow-page
+---
+title: What we do
+---
+body:
+
+#### body-copy ####
+content:
+
+##### text #####
+content: We are New Zealand's research and education network. We believe in a New Zealand where research, education and innovation flourish through real-time exchange of knowledge, ideas and information with the rest of the world. See how we're working towards that.
+##### quote #####
+content: The technical staff at REANNZ are some of the best network engineers in New Zealand.
+-----
+source: Paul Fallon, Chief Information and Technology Officer, W2
+##### grid #####
+items:
+
+###### grid-item ######
+content:
+
+####### stat #######
+prefix: 
+-------
+value: 99.99
+-------
+units: %
+-------
+primaryLabel: National network availability
+-------
+secondaryLabel: Less than 10 minutes of downtime per site over the past year
+------
+default_width: 1
+------
+small_width: 2
+------
+medium_width: 
+------
+large_width: 
+###### grid-item ######
+content:
+
+####### stat #######
+prefix: 
+-------
+value: 98.6
+-------
+units: %
+-------
+primaryLabel: of REANNZ members
+-------
+secondaryLabel: consider the network valuable or essential to business
+------
+default_width: 1
+------
+small_width: 2
+------
+medium_width: 
+------
+large_width: 
+---
+excerpt: At REANNZ we work to provide leading edge services for our country’s top researchers and educators, who often need access to technology that cannot be provided by commercial networks.

@@ -1,0 +1,30 @@
+.c-nav-main {
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+
+	&__home {
+		text-align: left;
+		float: left;
+	
+		& > .c-nav-main__link {
+			font-weight: bold;
+		}
+	}
+
+	&__pages {
+		display: none;
+		text-align: right;
+		float: right;
+	}
+
+	&__link:not(:first-child) {
+		margin-left: .5em;
+	}
+
+	@include breakpoint-4 {
+		&__pages {
+			display: block;
+		}
+	}
+}

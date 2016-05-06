@@ -1,0 +1,15 @@
+{% macro render_nav(self) %}
+
+	<div class="c c-nav-main">
+		<div class="c-nav-main__home">
+			<a class="c-nav-main__link">Lektor boilerplate</a>
+		</div>
+		<div class="c-nav-main__pages">
+			{% set root = site.get('/') %}
+			{% for child in root.children %}
+				<a class="c-nav-main__link {% if self.path == child.path %} c-nav-main__link--current{% endif %}" href="{{child|url}}">{{ child.title }}</a>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endmacro %}

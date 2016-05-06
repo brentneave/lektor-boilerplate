@@ -9,10 +9,12 @@
 
 @import "layouts/grid";
 @import "layouts/slice";
-@import "layouts/slice--line-length";
+@import "layouts/content-width";
 
 @import "components/component";
 @import "components/nav-small";
+@import "components/nav-main";
+@import "components/nav-footer";
 @import "components/quote";
 @import "components/stat";
 @import "components/text";

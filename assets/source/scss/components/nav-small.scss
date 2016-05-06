@@ -1,6 +1,6 @@
 .c-nav-small {
 
-  @include breakpoint-3 {
+  @include breakpoint-4 {
     display:none;
   }
 
@@ -20,7 +20,7 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background-color: black;
+    background-color: $dark-grey;
     color: white;
     transform-origin: center center;
     transition: transform .25s ease-in-out,

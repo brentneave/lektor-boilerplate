@@ -1,0 +1,8 @@
+{% macro render_page_header(self) %}
+<div class="l-content-width">
+	<div class="c c-text c-page-header">
+		<h1 class="c-page-header__title">{{ self.title }}</h1>
+		<p class="c-page-header__excerpt">{{ self.excerpt }}</p>
+	</div>
+</div>
+{% endmacro %}

@@ -1,0 +1,8 @@
+{% from "macros/components/text.html" import render_text %}
+<div class="l-slice">
+	<div class="l-content-width">
+	  {% for item in this.content.blocks %}
+	    {{ item }}
+	  {% endfor %}
+  	</div>
+</div>

@@ -1,4 +1,12 @@
 .l-slice {
-	display: block;
-	width: 100%;
+	padding: 3rem 0;
+
+	&--nav-main {
+	}
+
+	&--nav-main,
+	&--page-header,
+	&--page-footer {
+		background-color: $light-grey;
+	}
 }
